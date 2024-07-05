@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_표.html</title>
+</head>
+<body>
+    <h3># 웹 페이지에 표 출력하기</h3>
+
+    <p>
+        &lt;table&gt; : 표의 전체 범위를 지정하는 태그<br>
+        &lt;tr&gt; : table row, 해당 표에 한 줄을 추가하는 태그<br>
+        &lt;th&gt; : table header, 해당 줄에 제목 칸을 추가하는 태그<br>
+        &lt;td&gt; : table data, 해당 줄에 데이터 칸을 추가하는 태그<br>
+    </p>
+
+    <hr>
+
+    <table border="3">
+        <tr>
+            <th>이름</th>
+            <th>전화번호</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>빌 게이츠</tb>
+            <td>010-1234-1234</tb>
+            <td>실리콘 벨리</tb>
+        </tr>
+        <tr>
+            <td>마크 주커버그</td>
+            <td>010-1234-1234</td>
+            <td>로스엔젤레스</td>
+        </tr>
+    </table>
+
+    <h3>과일 가격 표</h3>
+
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th>가격</th>
+            <th>원산지1</th>
+            <th>원산지2</th>
+        </tr>
+        <tr>
+            <td>사과</td>
+            <td rowspan="2">2000</td>
+            <td>충주</td>
+            <td>원주</td>
+        </tr>
+        <tr>
+            <td>배</td>
+            <td>나주</td>
+            <td>창원</td>
+        </tr>
+        <tr>
+            <td>귤</td>
+            <td>23000</td>
+            <td style="text-align: center;" colspan="2">제주</td>
+        </tr>
+
+    </table>
+
+    <h3>시간표</h3>
+
+    <table border="1">
+        <tr>
+            <th style="text-align: center;" colspan="6">Time Table</th>
+        </tr>
+        <tr>
+            <td rowspan="6"><b>Hours</b></td>
+            <td style="text-align: center;"><b>Mon</b></td>
+            <td style="text-align: center;"><b>Tue</b></td>
+            <td style="text-align: center;"><b>Wed</b></td>
+            <td style="text-align: center;"><b>Thu</b></td>
+            <td style="text-align: center;"><b>Fri</b></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Science</td>
+            <td style="text-align: center;">Maths</td>
+            <td style="text-align: center;">Science</td>
+            <td style="text-align: center;">Maths</td>
+            <td style="text-align: center;">Arts</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Social</td>
+            <td style="text-align: center;">History</td>
+            <td style="text-align: center;">English</td>
+            <td style="text-align: center;">Social</td>
+            <td style="text-align: center;">Sports</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" colspan="5"><b>Lunch</b></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Science</td>
+            <td style="text-align: center;">Maths</td>
+            <td style="text-align: center;">Science</td>
+            <td style="text-align: center;">Maths</td>
+            <td style="text-align: center;" rowspan="2">Project</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Social</td>
+            <td style="text-align: center;">History</td>
+            <td style="text-align: center;">English</td>
+            <td style="text-align: center;">Social</td>
+        </tr>
+    </table>
+</body>
+</html>
