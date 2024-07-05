@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+#shadow0 {
+    color: orange;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    text-shadow: 5px 3px 2px black;
+}
+
+#shadow1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    width: 15em;
+    padding: 20px;
+    border-radius: 20px;
+    text-shadow: 0 0 3px white, 0 0 5px blue, 0 0 8px navy;
+}
+
+#shadow2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    width: 15em;
+    padding: 20px;
+    border-radius: 20px;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black, 1px -1px 1px black, -1px -1px 1px black;
+}
+
+#box-shadow0 {
+    width: 100px;
+    height: 200px;
+    box-shadow: 2px 2px 0 black, 4px 4px 0 rgba(0, 0, 0, 0.829), 6px 6px 0 rgba(0, 0, 0, 0.527);
+    border: 1px solid black;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_텍스트.html</title>
+    <link rel="stylesheet" href="./styles/style08.css">
+</head>
+<body>
+    <h3>text-align : 텍스트 정렬</h3>
+
+    <ul>
+        <li>center : 가운데 정렬</li>
+        <li>left : 왼쪽 정렬</li>
+        <li>right : 오른쪽 정렬</li>
+        <li>justify : 알맞게</li>
+    </ul>
+
+    <ul id="text-align-list">
+        <li style="text-align: center;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna 
+            eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
+            Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et.
+        </li>
+        <li style="text-align: left;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna 
+            eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
+            Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et.
+        </li>
+        <li style="text-align: right;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna 
+            eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
+            Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et.
+        </li>
+        <li style="text-align: justify;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna 
+            eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
+            Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et.
+        </li>
+    </ul>
+
+    <hr>
+
+    <h3>vertical align : 줄 내부에서의 높이 설정(sub, sup)</h3>
+
+    <!--div : 아무 효과 없는 블록 요소-->
+    <!--span : 아무 효과 없는 인라인 요소-->
+    <ul>
+        <li>Lorem ipsum dolor sit amet, <span style="vertical-align: text-top; font-size: 0.5rem;">consectetur</span> adipiscing elit</li>
+        <li>Lorem ipsum dolor sit amet, <span style="vertical-align: middle; font-size: 0.5rem;">consectetur</span> adipiscing elit</li>
+        <li>Lorem ipsum dolor sit amet, <span style="vertical-align: text-bottom; font-size: 0.5rem;">consectetur</span> adipiscing elit</li>
+    </ul>
+
+    <hr>
+
+    <h3>text-decoration : 텍스트에 줄 긋기</h3>
+
+    <ul>
+        <li>Lorem ipsum dolor sit amet <span style="text-decoration: solid 2px red underline;">consectetur</span></li>
+        <li>Lorem ipsum dolor sit amet <span style="text-decoration: solid 2px red line-through;">consectetur</span></li>
+        <li>Lorem ipsum dolor sit amet <span style="text-decoration: wavy 2px red underline;">consectetur</span></li>
+    </ul>
+
+    <hr>
+
+    <h3>letter-spacing : 글자 간격 설정</h3>
+
+    <ul>
+        <li style="letter-spacing: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        <li style="letter-spacing: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        <li style="letter-spacing: 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        <li style="letter-spacing: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        <li style="letter-spacing: -5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+    </ul>
+
+    <h3>word-spacing : 단어 간 간격 설정(띄어쓰기 설정)</h3>
+
+    <ul>
+        <li style="word-spacing: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        <li style="word-spacing: 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        <li style="word-spacing: -5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+    </ul>
+
+    <h3>line-height : 줄 간격 설정</h3>
+
+    <ul>
+        <li style="line-height: 30px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna 
+            eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
+            Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et.
+        </li>
+        <li style="line-height: 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna 
+            eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
+            Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et.
+        </li>
+        <li style="line-height: 10px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna 
+            eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
+            Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et.
+        </li>
+    </ul>
+
+    <h3>text-indent : 첫 줄에서의 들여쓰기 설정</h3>
+
+    <p style="text-indent: 1em; text-align: justify;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna 
+            eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
+            Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et.
+    </p>
+
+    <h3>white-space : 자동 줄 바꿈 설정</h3>
+
+    <ul>
+        <li>normal : 자동 줄 바꿈(기본값)</li>
+        <li>nowrap : 자동 줄 바꿈 해제</li>
+    </ul>
+
+    <p style="white-space: normal; border: 1px solid black;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna 
+            eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
+            Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et.
+    </p>
+
+    <p style="white-space: nowrap; border: 1px solid black;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna 
+            eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
+            Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et.
+    </p>
+
+    <!--
+        overflow : 요소 내부의 컨텐츠가 요소를 넘어갔을 때의 설정
+        overflow-x : 가로로 넘어갔을 때의 처리
+        overflow-y : 세로로 넘어갔을 때의 처리
+    -->
+    <p style="white-space: nowrap; border: 1px solid black; overflow-x: scroll;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna 
+            eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
+            Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et.
+    </p>
+</body>
+</html>

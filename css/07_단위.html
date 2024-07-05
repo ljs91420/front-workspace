@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_단위.html</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 30px;
+        }
+        
+        .abs-units {
+            border: solid 3px salmon;
+            margin: 3px;
+        }
+
+        .rel-units {
+            border: solid 3px slateblue;
+            margin: 3px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h3>절대 길이 단위</h3>
+
+    <ul>
+        <li>웹 브라우저(또는 다른 프로그램)의 크기가 변하더라도 항상 일정한 크기를 가지는 단위</li>
+        <li>px : 픽셀(화소)</li>
+        <li>mm : 밀리미터</li>
+        <li>cm : 센치미터</li>
+        <li>in : 인치</li>
+    </ul>
+
+    <div class="abs-units" style="width: 100px;">100px</div>
+    <div class="abs-units" style="width: 50mm;">50mm</div>
+    <div class="abs-units" style="width: 5cm;">5cm</div>
+    <div class="abs-units" style="width: 5in;">5in</div>
+
+    <h3>상대 길이 단위</h3>
+
+    <ul>
+        <li>화면을 보는 프로그램(viewport)의 크기가 변하면 크기가 함께 변하는 단위</li>
+        <li>% : 부모 요소의 몇 %를 차지하는가(부모 요소의 크기가 변하면 변함)</li>
+        <li>em : 현재 요소의 font-size 속성에 비례한 크기 설정</li>
+        <li>rem : 현재 전체 페이지(html 태그)의 font-size 값에 비례한 크기 설정</li>
+        <li>vw : viewport widt, 현재 화면 너비에 비례한 크기 설정(1vw는 현재 화면 전체 너비의 1%를 의미)</li>
+        <li>vh : viewport height, 현재 화면 높이에 비례한 크기 설정(1vh는 현재 화면 전체 높이의 1%를 의미)</li>
+    </ul>
+
+    <div class="rel-units" style="width: 50%;">50%</div>
+    <div class="rel-units" style="width: 10em">10em</div>
+    <div class="rel-units" style="width: 10rem">10rem</div>
+    <div class="rel-units" style="width: 20vw">20vw</div>
+    <div class="rel-units" style="width: 20vh">20vh</div>
+</body>
+</html>

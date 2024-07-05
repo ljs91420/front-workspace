@@ -1,0 +1,60 @@
+body {
+    border: solid 1px green;
+}
+
+.test-box {
+    border: solid 3px black;
+    width: 200px;
+    height: 100px;
+}
+
+#margin-box1 {
+    margin-top: 50px;
+    margin-left: 60%;
+    margin-bottom: 100px;
+}
+
+#margin-box2 {
+    margin: 20px 50px 50px 150px;
+}
+
+#margin-box3 {
+    margin: 25px auto; /* 값 2개 - 위/아래, 왼쪽/오른쪽*/
+}
+
+div[id^="padding-"] {
+    margin: 30px;
+    font-size: 25px;
+    width: 300px;
+    height: 200px;
+}
+
+#padding-box1 {
+    margin: 30px;
+}
+
+#padding-box2 {
+    margin: 30px;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-right: 100px;
+    font-size: 25px;
+    border-width: 20px;
+}
+
+div[id$="-ex"] {
+    width: 300px;
+    height: 300px;
+    border: solid 10px orange;
+    margin: 30px;
+    padding: 25px;
+    font-size: 15px;
+}
+
+#content-box-ex {
+    box-sizing: content-box;
+}
+
+#border-box-ex {
+    box-sizing: border-box;
+}

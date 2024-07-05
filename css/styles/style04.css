@@ -1,0 +1,89 @@
+div{
+    height: 200px;
+    border:  solid 3px black;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+div:first-child{
+    /*배경 이미지 설정*/
+    background-image: url("../images/cornelius-ventures.jpg");
+
+    /*배경 이미지 크기 설정*/
+    background-size: 50px 50px; /*너비 높이 설정*/
+    /*background-size: 200px auto;*//*너비 설정,높이 자동*/
+    /*background-size: auto 200px;*//*너비 자동,높이 설정*/
+
+    /*배경 이미지 반복 설정
+        
+      repeat: 반복함(기본설정)
+      repeat-x: 가로로 반복함
+      repeat-y: 세로로 반복함
+      no-repeat: 반복 안함
+      */
+      background-repeat: repeat-x;
+
+      /*
+        배경의 위치 설정
+
+        - bott, left, right, top, center ...
+        - 여러 옵션들의 조합이 가능하다
+      */
+      background-position: center;
+}
+div:nth-of-type(2){
+background-image: url("https://img.hankyung.com/photo/202403/AA.36104679.1.jpg");
+background-size: 50px 50px;
+background-repeat: repeat-x;
+background-position: center;
+}
+
+div:nth-of-type(3){
+    background-image: url("https://img.hankyung.com/photo/202403/AA.36104679.1.jpg");
+    background-size: 50px 50px;
+    background-repeat: repeat-y;
+    background-position: 80%;
+}
+
+div:nth-of-type(4){
+    background-image: url("https://img.hankyung.com/photo/202403/AA.36104679.1.jpg");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+div:nth-of-type(5){
+    background-image: url("https://img.hankyung.com/photo/202403/AA.36104679.1.jpg");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+div:nth-of-type(6){
+    background-image: url("https://img.hankyung.com/photo/202403/AA.36104679.1.jpg");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+div:nth-of-type(7){
+    background-image: url("https://img.hankyung.com/photo/202403/AA.36104679.1.jpg");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+div:nth-of-type(8){
+    background-image: url("https://img.hankyung.com/photo/202403/AA.36104679.1.jpg");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div:nth-of-type(9){
+    background-image: url("https://img.hankyung.com/photo/202403/AA.36104679.1.jpg");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: 50px 50px;
+}
