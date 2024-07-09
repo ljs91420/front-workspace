@@ -104,6 +104,7 @@
 
 .flex-layout > .content > nav {
     flex: 1;
+    order: 1;
     background-color: forestgreen;
 }
 
