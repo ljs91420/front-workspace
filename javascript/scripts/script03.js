@@ -1,24 +1,24 @@
 let num1 = 123;
 let num2 = 123.123;
 
-console.log('num1의 타입:', typeof num1);
-console.log('num2의 타입:', typeof num2);
+console.log('num1의 타입:', typeof num1); // number
+console.log('num2의 타입:', typeof num2); // number
 
 let str1 = '문자열';
 let str2 = "string";
 
-console.log('str1의 타입:', typeof str1);
-console.log('str2의 타입:', typeof str2);
+console.log('str1의 타입:', typeof str1); // string
+console.log('str2의 타입:', typeof str2); // string
 
 // 배열은 []를 사용한다.
 let arr1 = [1, 2, 3, 4, 5, 6];
 // 배열에 여러 종류의 값을 넣어서 사용하더라도 에러가 발생하지 않는다.
 let arr2 = [1, '김말이', 10, 123.123];
 
-console.log(arr1[0]);
-console.log(arr1[1]);
-console.log(arr1[2]);
-console.log(arr1[3]);
+console.log(arr1[0]); // 1
+console.log(arr1[1]); // 2
+console.log(arr1[2]); // 3
+console.log(arr1[3]); // 4
 
 for (let i = 0; i < arr1.length; ++i) {
     console.log('arr1[' + i + ']=', arr1[i]);
@@ -32,7 +32,7 @@ console.log(arr2[99]); // 없는 index에 접근해도 에러 대신 undefined�
 
 let complete = true;
 
-console.log(`complete의 타입 ${typeof complete}`);
+console.log(`complete의 타입 ${typeof complete}`); // complete의 타입 boolean
 
 // javascript object : {}를 사용한다, 값이 key: value로 되어 있다.
 let person = {
@@ -43,9 +43,9 @@ let person = {
 };
 
 // object에 들어있는 값을 꺼내 쓸 때 2가지 방법을 모두 사용할 수 있다.
-console.log(`person.name=${person.name}`);
-console.log(`person['name']=${person['name']}`);
-console.log(`person["name"]=${person["name"]}`);
+console.log(`person.name=${person.name}`); // person.name=홍길동
+console.log(`person['name']=${person['name']}`); // person['name']=홍길동
+console.log(`person["name"]=${person["name"]}`); // person["name"]=홍길동
 
 // 반복문(for...in)으로 object 타입 꺼내기
 for (let key in person) {
