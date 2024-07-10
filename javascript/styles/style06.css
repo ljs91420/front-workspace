@@ -1,0 +1,10 @@
+#gugudan-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 2단에서 9단까지니까 컬럼이 8개 */
+}
+
+#gugudan-container > div {
+    border: solid 1px black;
+    width: 80px;
+    text-align: center;
+}
