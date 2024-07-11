@@ -156,13 +156,13 @@ const isAllAlphabet = text => {
     }
 };
 
-console.log(checkAlphabet('a'));
-console.log(checkAlphabet2('a'));
+console.log(checkAlphabet('a')); // true
+console.log(checkAlphabet2('a')); // true
 
 let word = 'airplane';
 let word2 = 'air플레인';
-console.log(`${word}는 영어만으로 된 단어인가요? ${isAllAlphabet(word)}`);
-console.log(`${word2}는 영어만으로 된 단어인가요? ${isAllAlphabet(word2)}`);
+console.log(`${word}는 영어만으로 된 단어인가요? ${isAllAlphabet(word)}`); // airplane는 영어만으로 된 단어인가요? true
+console.log(`${word2}는 영어만으로 된 단어인가요? ${isAllAlphabet(word2)}`); // air플레인는 영어만으로 된 단어인가요? false
 
 // 2. 전달한 숫자가 3의 배수이면 true를 반환, 아니면 false를 반환하는 함수
 function checkMul3(number) {
@@ -171,12 +171,12 @@ function checkMul3(number) {
 
 const checkMul3_2 = number => number % 3 == 0;
 
-console.log(checkMul3(6));
-console.log(checkMul3_2(6));
+console.log(checkMul3(6)); // true
+console.log(checkMul3_2(6)); // true
 
 // 3. 전달한 숫자에 따라 문자열 "짝수입니다." 또는 "홀수입니다."를 반환하는 함수
 function checkEvenOrOdd(number) {
-    number % 2 == 0 ? '짝수입니다.' : '홀수입니다.';
+    return number % 2 == 0 ? '짝수입니다.' : '홀수입니다.';
 }
 
 const checkEvenOrOdd2 = number => number % 2 == 0 ? "짝수입니다." : "홀수입니다.";
@@ -184,8 +184,8 @@ const checkEvenOrOdd2 = number => number % 2 == 0 ? "짝수입니다." : "홀수
 // 번외 : "짝수입니다." 경고창 또는 "홀수입니다." 경고창을 띄워주는 함수
 const checkEvenOrOdd3 = number => number % 2 == 0 ? alert("짝수입니다.") : alert("홀수입니다.");
 
-console.log(checkEvenOrOdd(3));
-console.log(checkEvenOrOdd2(3));
+console.log(checkEvenOrOdd(3)); // 홀수입니다.
+console.log(checkEvenOrOdd2(3)); // 홀수입니다.
 // checkEvenOrOdd3(3);
 
 // 4. 숫자를 전달하면 해당 숫자의 모든 약수를 배열로 반환하는 함수
@@ -202,8 +202,8 @@ function getSubmultipleArr(number) {
 
 const getSubmultipleArr2 = number => getSubmultipleArr(number);
 
-console.log(getSubmultipleArr(27));
-console.log(getSubmultipleArr2(27));
+console.log(getSubmultipleArr(27)); // [1, 3, 9, 27]
+console.log(getSubmultipleArr2(27)); // [1, 3, 9, 27]
 
 // 5. 전달한 정수가 소수라면 true를 반환하고 아니면 false를 반환하는 함수
 function checkPrime(number) {
@@ -212,8 +212,8 @@ function checkPrime(number) {
 
 const checkPrime2 = number => getSubmultipleArr2(number).length == 2;
 
-console.log(checkPrime(157));
-console.log(checkPrime2(157));
+console.log(checkPrime(157)); // true
+console.log(checkPrime2(157)); // true
 
 // 6. 메세지와 횟수를 전달하면 해당 메세지를 전달한 횟수만큼 반복하는 함수
 function printMessages(message, number) {

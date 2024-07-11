@@ -28,22 +28,22 @@
         let b = '10';
 
         // 자바스크립트에서는 ==과 ===을 주의해야 한다.
-        console.log(a == b);
+        console.log(a == b); // true
 
         a = 1e3; // 1에 10을 3번 곱한 결과(부동소수점 리터럴)
-        console.log('1e3:', a);
+        console.log('1e3:', a); // 1e3: 1000
         a = 1.333e4 // 1.333에 10을 4번 곱한 결과
-        console.log('1.333e4:', a);
+        console.log('1.333e4:', a); // 1.333e4: 13330
         a = 1.234e-3 // 1.234에서 10을 3번 나눈 결과
-        console.log('1.234e-3:', a);
+        console.log('1.234e-3:', a); // 1.234e-3: 0.001234
 
         // Infinity : 무한
-        console.log(10 / 0);
-        console.log(typeof Infinity);
+        console.log(10 / 0); // Infinity
+        console.log(typeof Infinity); // number
 
         // NaN : Not a Number
-        console.log(NaN);
-        console.log(typeof NaN);
+        console.log(NaN); // NaN
+        console.log(typeof NaN); // number
 
         // 2진수, 8진수, 16진수
         console.log(0b111); // 2진수 111

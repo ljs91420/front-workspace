@@ -25,14 +25,14 @@
         const word2 = '돼지고기두루치기';
 
         // 자바스크립트는 문자열끼리 비교 연산자를 사용할 수 있다.(사전순 비교)
-        console.log(giraffe < horse);
-        console.log(word1 > word2);
+        console.log(giraffe < horse); // true
+        console.log(word1 > word2); // false
 
         // 문자열의 문자 하나에 접근하기
-        println('fruits[0]: ' + fruits[0]);
+        println('fruits[0]: ' + fruits[0]); // fruits[0]: a
 
         // length
-        println('length: ' + fruits.length);
+        println('length: ' + fruits.length); // length: 33
 
         // 반복문으로 한 글자씩 접근하기
         for (let i = 0; i < fruits.length; ++i) {
@@ -40,7 +40,7 @@
         }
 
         for (ch of fruits) {
-            print(ch);
+            print(ch); // apple/banana/kiwi/pineapple/grape
         }
         println();
 
@@ -48,22 +48,22 @@
         // start, end 모두 주는 경우 : start 이상 end 미만으로 자른다.
         // start만 주는 경우 : start 위치부터 맨 마지막까지 자른다.
         // slice의 start에 음수를 주는 경우 : 뒤에서부터 자른다.
-        println('substring(5, 10): ' + fruits.substring(5, 10));
-        println('substring(10): ' + fruits.substring(10));
-        println('slice(5, 10): ' + fruits.slice(5, 10));
-        println('slice(10): ' + fruits.slice(10));
-        println('slice(-5): ' + fruits.slice(-5));
+        println('substring(5, 10): ' + fruits.substring(5, 10)); // substring(5, 10): /bana
+        println('substring(10): ' + fruits.substring(10)); // substring(10): na/kiwi/pineapple/grape
+        println('slice(5, 10): ' + fruits.slice(5, 10)); // slice(5, 10): /bana
+        println('slice(10): ' + fruits.slice(10)); // slice(10): na/kiwi/pineapple/grape
+        println('slice(-5): ' + fruits.slice(-5)); // slice(-5): grape
 
         // toUpperCase(), toLowerCase()
-        println(fruits.toUpperCase());
-        println(fruits.toUpperCase().toLowerCase());
+        println(fruits.toUpperCase()); // APPLE/BANANA/KIWI/PINEAPPLE/GRAPE
+        println(fruits.toUpperCase().toLowerCase()); // apple/banana/kiwi/pineapple/grape
 
         // indexOf(searchString, position?)
-        println('apple의 위치: ' + fruits.indexOf('apple'));
-        println('1부터 찾은 apple의 위치: ' + fruits.indexOf('apple', 1));
+        println('apple의 위치: ' + fruits.indexOf('apple')); // apple의 위치: 0
+        println('1부터 찾은 apple의 위치: ' + fruits.indexOf('apple', 1)); // 1부터 찾은 apple의 위치: 22
 
         // split : 스플릿
-        console.log(fruits.split('/'));
+        console.log(fruits.split('/')); // [apple, banana, kiwi, orange, grape]
 
         for (fruit of fruits.split('/')) {
             println(fruit);
@@ -78,8 +78,8 @@
         console.log('\u{1F604}');
 
         // codePointAt() : 문자의 아스키코드(유니코드) 보기
-        console.log('가'.codePointAt());
-        console.log(new Number(44032).toString(16));
+        console.log('가'.codePointAt()); // 44032
+        console.log(new Number(44032).toString(16)); // ac00
     </script>
 </body>
 </html>
