@@ -103,3 +103,130 @@ const getRandomColor = () => colors[parseInt(Math.random() * colors.length)];
 for (let i = 0; i < 10; ++i) {
     console.log(getRandomColor());
 }
+
+// 연습: 다음 내용을 화살표 함수로 변경해보기
+// function ask(question, yes, no) {
+//     if (confirm(question)) yes()
+//     else no();
+// }
+
+// ask(
+//     "동의하십니까?",
+//     function() { alert("동의하셨습니다."); },
+//     function() { alert("취소 버튼을 누르셨습니다."); }
+// );
+
+// const ask = (question, yes, no) => {
+//     if (confirm(question)) yes()
+//     else no();
+// }
+
+// ask(
+//     "동의하십니까?",
+//     () => alert("동의하셨습니다."),
+//     () => alert("취소 버튼을 누르셨습니다.")
+// );
+
+/*
+    # 다음 함수를 정의하고 올바르게 동작하는지 테스트 해보세요.
+
+        function 버전, arrow function 버전으로 2번씩 만들기
+    
+        1. 전달한 문자가 알파벳이면 true를 반환, 아니면 false를 반환하는 함수
+        2. 전달한 숫자가 3의 배수이면 true를 반환, 아니면 false를 반환하는 함수
+        3. 전달한 숫자에 따라 문자열 "짝수입니다." 또는 "홀수입니다."를 반환하는 함수
+        4. 숫자를 전달하면 해당 숫자의 모든 약수를 배열로 반환하는 함수
+        5. 전달한 정수가 소수라면 true를 반환하고 아니면 false를 반환하는 함수
+        6. 메세지와 횟수를 전달하면 해당 메세지를 전달한 횟수만큼 반복하는 함수
+*/
+
+// 1. 전달한 문자가 알파벳이면 true를 반환, 아니면 false를 반환하는 함수
+function checkAlphabet(ch) {
+    return (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z');
+}
+
+const checkAlphabet2 = ch => (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z');
+
+const isAllAlphabet = text => {
+    for (ch of text) {
+        if (!checkAlphabet(ch)) {
+            return false;
+        }
+        return true;
+    }
+};
+
+console.log(checkAlphabet('a'));
+console.log(checkAlphabet2('a'));
+
+let word = 'airplane';
+let word2 = 'air플레인';
+console.log(`${word}는 영어만으로 된 단어인가요? ${isAllAlphabet(word)}`);
+console.log(`${word2}는 영어만으로 된 단어인가요? ${isAllAlphabet(word2)}`);
+
+// 2. 전달한 숫자가 3의 배수이면 true를 반환, 아니면 false를 반환하는 함수
+function checkMul3(number) {
+    return number % 3 == 0;
+}
+
+const checkMul3_2 = number => number % 3 == 0;
+
+console.log(checkMul3(6));
+console.log(checkMul3_2(6));
+
+// 3. 전달한 숫자에 따라 문자열 "짝수입니다." 또는 "홀수입니다."를 반환하는 함수
+function checkEvenOrOdd(number) {
+    number % 2 == 0 ? '짝수입니다.' : '홀수입니다.';
+}
+
+const checkEvenOrOdd2 = number => number % 2 == 0 ? "짝수입니다." : "홀수입니다.";
+
+// 번외 : "짝수입니다." 경고창 또는 "홀수입니다." 경고창을 띄워주는 함수
+const checkEvenOrOdd3 = number => number % 2 == 0 ? alert("짝수입니다.") : alert("홀수입니다.");
+
+console.log(checkEvenOrOdd(3));
+console.log(checkEvenOrOdd2(3));
+// checkEvenOrOdd3(3);
+
+// 4. 숫자를 전달하면 해당 숫자의 모든 약수를 배열로 반환하는 함수
+function getSubmultipleArr(number) {
+    let arr = [];
+    let index = 0;
+    for (let i = 1; i <= number; ++i) {
+        if (number % i === 0) {
+            arr[index++] = i;
+        }
+    }
+    return arr;
+}
+
+const getSubmultipleArr2 = number => getSubmultipleArr(number);
+
+console.log(getSubmultipleArr(27));
+console.log(getSubmultipleArr2(27));
+
+// 5. 전달한 정수가 소수라면 true를 반환하고 아니면 false를 반환하는 함수
+function checkPrime(number) {
+    return getSubmultipleArr(number).length == 2;
+}
+
+const checkPrime2 = number => getSubmultipleArr2(number).length == 2;
+
+console.log(checkPrime(157));
+console.log(checkPrime2(157));
+
+// 6. 메세지와 횟수를 전달하면 해당 메세지를 전달한 횟수만큼 반복하는 함수
+function printMessages(message, number) {
+    for (let i = 0; i < number; ++i) {
+        console.log(message);
+    }
+}
+
+const printMessages2 = (message, number) => {
+    for (let i = 0; i < number; ++i) {
+        console.log(message);
+    }
+}
+
+printMessages('Hello', 3);
+printMessages2("Hello", 3);
