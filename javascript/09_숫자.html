@@ -133,9 +133,11 @@
 
         // 연습 : 최소값과 최대값을 전달하면 해당 범위의 랜덤 정수를 반환하는 함수를 정의하고 테스트해보세요.
         // (사용 예 : randomInteger(2, 10)은 2 ~ 10 사이의 정수가 반환된다.)
-        const randomInteger = (min, max) => parseInt(Math.random() * (max - min + 1) + min);
+        const randomInteger = (start, end) => Math.floor(Math.random() * (Math.abs(end - start) + 1) + Math.min(start, end));
 
-        console.log(randomInteger(2, 10));
+        for (let i = 0; i < 10; ++i) {
+            console.log(randomInteger(-2, 2));
+        }
     </script>
 </body>
 </html>
