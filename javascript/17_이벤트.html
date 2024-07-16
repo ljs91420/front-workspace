@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_이벤트.html</title>
+    <style>
+        #div1 {
+            border: solid 3px black;
+            width: 150px;
+            height: 150px;
+        }
+
+        #tic-tac-toe, #tic-tac-toe2 {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 3px;
+        }
+
+        #tic-tac-toe > *, #tic-tac-toe2 > * {
+            border: solid 3px black;
+            user-select: none;
+            font-size: 40px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        /* 이벤트를 부모 요소에 달아보자 */
+        #tic-tac-toe2 {
+            border: solid 3px red;
+        }
+        
+        #out-div, #cap-out-div {
+            background-color: rebeccapurple;
+            color: white;
+            border: solid 3px black;
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        #mid-div, #cap-mid-div {
+            background-color: orange;
+            border: solid 3px black;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        #inner-div, #cap-inner-div {
+            background-color: cadetblue;
+            border: solid 3px black;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>이벤트 속성</h3>
+
+    <ul>
+        <li>앞에 on이 붙는 속성들은 자바스크립트 이벤트 속성이다.(onclick, onmouseover, onkeydown, ...)</li>
+        <li>해당 이벤트 속성의 값으로 자바스크립트 코드(콜백 함수)를 정의해둘 수 있다.(콜백 함수에는 이벤트 정보 객체가 넘어온다.)</li>
+        <li>해당 요소의 HTML 속성에 자바스크립트 코드를 정의해둘 수 있다.(this로 해당 요소를 가리킬 수 있다.)</li>
+        <li>해당 요소의 addEventListener() 메서드를 사용하여 이벤트를 추가할 수 있다.(해당 이벤트 속성에서 on을 빼고 추가해야 한다.)</li>
+    </ul>
+
+    <div id="div1" onmouseleave="this.innerText = '마우스가 떠났습니다...';">안녕하세요~</div>
+
+    <h3>여러 요소에서 하나의 이벤트 사용하기</h3>
+
+    <div id="tic-tac-toe">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <hr>
+
+    <h3>부모 요소에만 이벤트 추가하여 자식 요소들 제어하기 (이벤트 위임)</h3>
+
+    <ul>
+        <li>이벤트를 부모 요소에만 추가하여 활용할 수 있다.</li>
+        <li>정확하게 이벤트를 발생시킨 요소(이벤트를 발생시켰을 당시 가장 안쪽에 있는 요소) : target</li>
+        <li>해당 이벤트가 달려있는 요소 : currentTarget</li>
+    </ul>
+
+    <div id="tic-tac-toe2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h3>이벤트 버블링 (Bubbling)</h3>
+
+    <ul>
+        <li>중첩된 요소에서 이벤트가 발생했을 때 이벤트가 자식 요소로부터 부모 요소까지 전이되는 과정</li>
+        <li>이벤트가 발생한 자식 요소부터 중첩되어 있는 부모 요소까지 진행하면서 각 요소의 이벤트 핸들러를 동작시킨다.</li>
+    </ul>
+
+    <div id="out-div">
+        제일 바깥 요소
+        <div id="mid-div">
+            중간에 있는 요소
+            <div id="inner-div">
+                제일 안쪽에 있는 요소
+            </div>
+        </div>
+    </div>
+
+    <h3>이벤트 캡처링</h3>
+
+    <ul>
+        <li>버블링보다 먼저 일어나는 이벤트 처리 단계</li>
+        <li>버블링과 반대로 부모 요소부터 자식 요소까지 전이되는 이벤트 처리 순서</li>
+        <li>캡처링이 진행된 이후에 버블링이 다시 진행된다.</li>
+    </ul>
+
+    <div id="cap-out-div">
+        제일 바깥 요소
+        <div id="cap-mid-div">
+            중간에 있는 요소
+            <div id="cap-inner-div">
+                제일 안쪽에 있는 요소
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const div1 = document.getElementById("div1");
+
+        console.dir(div1);
+
+        // mouseenter : 해당 요소로 마우스가 들어왔을 때 발생하는 이벤트
+        div1.onmouseenter = (e) => {
+            console.dir(e);
+            console.log('e.target:', e.target);
+            console.log('e.srcElement:', e.srcElement);
+            console.log('e.toElement:', e.toElement);
+            console.log('alt키 눌린 상태였나?', e.altKey);
+            console.log('shift키 눌린 상태였나?', e.shiftKey);
+            div1.innerText = "마우스가 들어왔습니다.";
+        };
+
+        div1.addEventListener('click', (e) => {
+            console.dir(e);
+            e.target.innerText = "클릭되었습니다!";
+            e.target.style.color = "red";
+        });
+
+        const ticTacToeShapes = ['', 'X', 'O'];
+        const ticTacToeValues = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+        // 연습 : 나머지 8칸에도 똑같은 이벤트를 적용해보세요.
+        const ticTacToeDivs = document.querySelectorAll("#tic-tac-toe > div");
+
+        Array.from(ticTacToeDivs).forEach((div, index) => {
+            div.addEventListener('click', (e) => {
+                div.innerText = ticTacToeShapes[++ticTacToeValues[index] % ticTacToeShapes.length];
+            });
+        });
+
+        // 부모 요소에 이벤트 추가만으로도 자식 요소들을 모두 제어할 수 있다.
+        const ticTacToe2 = document.getElementById("tic-tac-toe2");
+
+        ticTacToe2.addEventListener('click', (e) => {
+            if (e.target.id === 'tic-tac-toe2') {
+                return;
+            }
+            
+            const currShape = e.target.innerText;
+
+            if (currShape === '') {
+                e.target.innerText = 'X';
+            } else if (currShape === 'X') {
+                e.target.innerText = 'O';
+            } else if (currShape === 'O') {
+                e.target.innerText = '';
+            }
+        });
+
+        const outDiv = document.getElementById("out-div");
+        const midDiv = document.getElementById("mid-div");
+        const innerDiv = document.getElementById("inner-div");
+
+        outDiv.addEventListener('click', (e) => {
+            console.log('이벤트를 발생시킨 주체:', e.target);
+            console.log('이 이벤트의 주인:', e.currentTarget);
+            if (e.target === e.currentTarget) {
+                alert("제일 바깥쪽 요소가 클릭됨!");
+            }
+        });
+
+        midDiv.addEventListener('click', (e) => {
+            console.log('이벤트를 발생시킨 주체:', e.target);
+            console.log('이 이벤트의 주인:', e.currentTarget);
+            if (e.target === e.currentTarget) {
+                alert("중간 요소가 클릭됨!");
+            }
+        });
+
+        innerDiv.addEventListener('click', (e) => {
+            alert("제일 안쪽 요소가 클릭됨!");
+        });
+
+        const capOutDiv = document.getElementById("cap-out-div");
+        const capMidDiv = document.getElementById("cap-mid-div");
+        const capInnerDiv = document.getElementById("cap-inner-div");
+
+        // 이벤트 추가시 캡처링 단계에서도 잡겠다고 설정하기(addEventListener()의 세 번째 파라미터를 true로 설정하기)
+        capOutDiv.addEventListener('click', (e) => {
+            alert(`제일 바깥쪽 Div입니다.`);
+        }, true);
+
+        capMidDiv.addEventListener('click', (e) => {
+            alert(`중간 Div입니다.`);
+        }, true);
+
+        capInnerDiv.addEventListener('click', (e) => {
+            alert(`제일 안쪽 Div입니다.`);
+        }, true);
+
+        // 캡처링 이후에 발동될 이벤트들 (버블링 이벤트들)
+        capOutDiv.addEventListener('click', (e) => {
+            alert(`제일 바깥쪽 Div입니다.`);
+        });
+
+        capMidDiv.addEventListener('click', (e) => {
+            alert(`중간 Div입니다.`);
+        });
+
+        capInnerDiv.addEventListener('click', (e) => {
+            alert(`제일 안쪽 Div입니다.`);
+        });
+    </script>
+</body>
+</html>
