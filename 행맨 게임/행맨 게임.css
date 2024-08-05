@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    margin-top: 50px;
+}
+
+#word-display {
+    font-size: 2em;
+    letter-spacing: 10px;
+}
+
+#keyboard {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 1.2em;
+    margin: 5px;
+    padding: 10px;
+}
